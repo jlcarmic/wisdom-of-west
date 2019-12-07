@@ -61,6 +61,18 @@ const LaunchRequestHandler = {
   },
 }
 
+const SessionEndedRequestHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest'
+  },
+  handle(handlerInput) {
+    return handlerInput.responseBuilder
+      .speak('Peace out!')
+      .withShouldEndSession(true)
+      .getResponse()
+  },
+}
+
 const NoIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
@@ -131,7 +143,8 @@ exports.handler = builder
     LaunchRequestHandler,
     NoIntentHandler,
     QuoteIntentHandler,
-    YesIntent
+    YesIntent,
+    SessionEndedRequestHandler
   )
   .addErrorHandlers(ErrorHandler)
   .lambda()

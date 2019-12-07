@@ -8,7 +8,7 @@
     "build:clean": "rm -f wisdom-of-west.zip",
     "build:zip": "zip -r wisdom-of-west.zip ./node_modules index.js",
     "deploy": "npm run build && npm run upload",
-    "upload": "aws lambda update-function-code --function-name \"WisdomOfWest\" --zip-file \"fileb://wisdom-of-west.zip\"",
+    "upload": "aws lambda update-function-code --function-name \"WisdomOfWest\" --zip-file \"fileb://wisdom-of-west.zip\" --profile lambda-deployer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
