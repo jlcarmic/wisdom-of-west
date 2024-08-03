@@ -14,7 +14,7 @@
   "keywords": [
     "kanye"
   ],
-  "author": "John Carmichael <jlcarmic@gmail.com>",
+  "author": "John Carmichael (http://johncarmichael.me)",
   "license": "ISC",
   "dependencies": {
     "ask-sdk-core": "^2.6.0",
