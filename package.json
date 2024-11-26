@@ -19,6 +19,6 @@
   "dependencies": {
     "ask-sdk-core": "^2.6.0",
     "ask-sdk-model": "^1.18.0",
-    "axios": "^0.19.0"
+    "axios": "^0.21.1"
   }
 }
